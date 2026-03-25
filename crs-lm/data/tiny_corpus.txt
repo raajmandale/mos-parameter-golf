@@ -1,0 +1,15 @@
+the cat sat on the mat
+the dog sat on the log
+the cat chased the mouse
+the dog chased the cat
+language models learn patterns from data
+small models need good context
+context improves prediction quality
+efficient models use fewer tokens
+structured context can preserve meaning
+pattern based systems can reduce noise
+wrong context can hurt small model performance
+relevant context can stabilize predictions
+compression can improve efficiency
+token filtering can reduce compute
+small models can benefit from cleaner inputs
