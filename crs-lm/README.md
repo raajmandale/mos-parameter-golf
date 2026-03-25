@@ -7,17 +7,17 @@
 <h1 align="center">🧠 CRS-LM</h1>
 
 <p align="center">
-  Context Reconstruction System for Language Models  
+  Context Reconstruction System for Language Models
 </p>
 
 ---
 
 ## 🚀 What is CRS-LM?
 
-CRS-LM is a **context optimization layer** for language models.
+CRS-LM is a **context optimization layer**.
 
 Instead of:
-> Feeding full context blindly
+> Feeding full context
 
 We:
 > Filter → Compress → Reconstruct → Predict
@@ -27,43 +27,39 @@ We:
 ## ⚙️ Pipeline
 
 ```text
-Input → Tokenizer → CRS Filter → TinyLM → Output
+Input → Tokenizer → CRS → TinyLM → Output
 🧠 CRS Engine
-
-Core responsibilities:
-
-✂️ Token filtering
-📉 Context compression
-🔄 Reconstruction logic
+✂️ Noise removal
+📉 Token reduction
+🔄 Context reconstruction
 🎯 Signal preservation
 📊 Metrics
 Metric	Value
 Token Reduction	~41%
-Speed Gain	Slight
-Loss Increase	Yes
-⚠️ Reality Check
-- Not optimized
-- Not production-ready
-+ Strong research potential
+Speed	Slightly faster
+Loss	Increased
+⚠️ Status
+- Not production ready
++ Research prototype
++ High potential
 📁 Modules
 crs-lm/
-├── model/        # TinyLM
-├── tokenizer/    # Token processing
-├── crs/          # CRS engine
+├── model/
+├── tokenizer/
+├── crs/
 ├── train.py
 ├── infer.py
 ├── eval.py
-🧪 Example Flow
-text = "AI systems need better context"
+🧪 Example
+text = "AI needs better context"
 
 tokens = tokenize(text)
 filtered = crs_filter(tokens)
 output = model.predict(filtered)
 🧬 Roadmap
-🔍 Better CRS scoring
-🧠 Graph-based context (DFG)
-🔄 Semantic reconstruction
-📊 Benchmark vs LLMs
+Smarter CRS scoring
+Graph-based context
+Semantic recovery
 🧠 Philosophy
 
-“Context > Tokens”
+Context > Tokens

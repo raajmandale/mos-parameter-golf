@@ -2,23 +2,23 @@
   <img src="./crs-lm/banner.svg" width="100%" />
 </p>
 
-<h1 align="center">⚡ MOS Parameter Golf → CRS-LM</h1>
+<h1 align="center">⚡ CRS-LM</h1>
 
 <p align="center">
-  🧠 Smarter Context • ⚡ Fewer Tokens • 🔍 Better Reasoning  
+  🧠 Context Reconstruction System for Language Models  
+  <br/>
+  ⚡ Reduce Tokens • Preserve Structure • Improve Efficiency
 </p>
 
 ---
 
 ## 🚀 Overview
 
-This repository started as:
+CRS-LM is a **structure-aware context optimization layer** for language models.
 
-> 🎯 **MOS Parameter Golf (token minimization experiments)**
+Instead of scaling models with more tokens:
 
-Now evolved into:
-
-> 🧠 **CRS-LM (Context Reconstruction System - Language Model)**
+> CRS-LM reduces input size **while preserving reasoning quality**
 
 ---
 
@@ -28,17 +28,19 @@ Instead of feeding full raw context to LLMs:
 
 ```text
 Raw Context → CRS Engine → Smart Context → LM
-CRS does:
+✨ What CRS Does
 ✂️ Removes noise
 📉 Compresses tokens
 🔄 Reconstructs missing structure
-🧠 Improves reasoning efficiency
-🧬 System Architecture
+🧠 Preserves reasoning signal
+🧬 Architecture
+<p align="center"> <img src="./crs-lm/architecture.svg" width="100%" /> </p>
+⚙️ Pipeline
 Input Text
    ↓
 Tokenizer
    ↓
-CRS Filter Engine
+CRS Filter Engine (SACR)
    ↓
 Compressed Context
    ↓
@@ -54,11 +56,18 @@ CRS-LM	48	0.2715	0.82s
 ❌ Quality drop exists
 ⚠️ Not production-ready
 ✔️ Strong research direction
+🧪 Why This Matters
+Traditional LLM	CRS-LM
+Uses full context	Uses filtered context
+Token heavy	Token efficient
+No structure awareness	Structure-aware
+Linear reasoning	Reconstructed reasoning
 📁 Project Structure
 mos-parameter-golf/
 │
 ├── crs-lm/
 │   ├── banner.svg
+│   ├── architecture.svg
 │   ├── README.md
 │   ├── model/
 │   ├── tokenizer/
@@ -79,22 +88,16 @@ pip install -r requirements.txt
 python train.py
 python infer.py
 python eval.py
-🧪 What Makes This Different?
-Traditional LLM	CRS-LM
-Uses full context	Uses filtered context
-Token heavy	Token efficient
-No reconstruction	Reconstruction-aware
-Linear reasoning	Structured reasoning
 🔗 Key Components
-🧠 CRS Engine → context compression + filtering
-🤖 TinyLM → lightweight model
-🔍 Evaluation → benchmark comparison
-📊 Results → token vs quality tradeoff
+🧠 CRS Engine → context filtering + compression
+⚙️ SACR → structure-aware reduction logic
+🤖 TinyLM → lightweight sequence model
+📊 Benchmark → token vs loss tradeoff
 🧬 Future Direction
 🔗 CRS + DFG (Deterministic Fragment Graph)
 🧠 AI Memory Layer (XLifelineAI)
-⚙️ M-OS Runtime Integration
-🤖 Agent Memory Optimization
+⚙️ M-OS runtime integration
+🤖 Agent memory optimization
 📌 Status
 + Research Prototype
 - Not Production Ready
@@ -102,13 +105,16 @@ Linear reasoning	Structured reasoning
 👨‍💻 Author
 
 Raaj Mandale
-Systems Architect • AI Infra • M-OS • QBAIX
+Systems Architect • AI Infrastructure • M-OS • QBAIX
 
 ⭐ Support
-Star ⭐
-Fork 🍴
-Share 🚀
+
+If this project interests you:
+
+⭐ Star the repo
+🍴 Fork it
+🚀 Share it
 🧠 Final Thought
 
-“LLMs don’t need more tokens.
-They need better context.”
+LLMs don’t need more tokens.
+They need better context.
