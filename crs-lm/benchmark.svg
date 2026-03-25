@@ -1,0 +1,89 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+      <stop offset="100%" stop-color="#f7fbff"></stop>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"></stop>
+      <stop offset="100%" stop-color="#60a5fa"></stop>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"></stop>
+      <stop offset="100%" stop-color="#fb923c"></stop>
+    </linearGradient>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .sub { font: 16px Arial, sans-serif; fill: #475569; }
+      .label { font: 14px Arial, sans-serif; fill: #334155; }
+      .small { font: 13px Arial, sans-serif; fill: #64748b; }
+      .metric { font: 700 14px Arial, sans-serif; fill: #111827; }
+      .axis { stroke: #cbd5e1; stroke-width: 2; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .box { fill: #ffffff; stroke: #dbeafe; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"></rect>
+
+  <text x="60" y="55" class="title">CRS-LM Benchmark Snapshot</text>
+  <text x="60" y="82" class="sub">Controlled tiny-LM sweep — token reduction vs loss tradeoff</text>
+
+  <!-- left card -->
+  <rect x="60" y="120" width="360" height="340" rx="20" class="box"></rect>
+  <text x="90" y="160" class="metric">Phase-1 Reality</text>
+
+  <text x="90" y="210" class="label">Baseline</text>
+  <rect x="90" y="225" width="220" height="18" rx="9" fill="#e2e8f0"></rect>
+  <rect x="90" y="225" width="220" height="18" rx="9" fill="url(#blue)"></rect>
+  <text x="325" y="239" class="small">81 tokens</text>
+
+  <text x="90" y="280" class="label">CRS-LM</text>
+  <rect x="90" y="295" width="220" height="18" rx="9" fill="#e2e8f0"></rect>
+  <rect x="90" y="295" width="130" height="18" rx="9" fill="url(#orange)"></rect>
+  <text x="325" y="309" class="small">48 tokens</text>
+
+  <text x="90" y="360" class="metric">Token Reduction: ~41%</text>
+  <text x="90" y="388" class="small">Loss rises from 0.1873 → 0.2715</text>
+  <text x="90" y="416" class="small">Good research signal, not production-ready</text>
+
+  <!-- right chart -->
+  <rect x="470" y="120" width="670" height="340" rx="20" class="box"></rect>
+  <text x="500" y="160" class="metric">Controlled Sweep</text>
+
+  <!-- grid -->
+  <line x1="540" y1="400" x2="1080" y2="400" class="axis"></line>
+  <line x1="540" y1="200" x2="540" y2="400" class="axis"></line>
+
+  <line x1="540" y1="350" x2="1080" y2="350" class="grid"></line>
+  <line x1="540" y1="300" x2="1080" y2="300" class="grid"></line>
+  <line x1="540" y1="250" x2="1080" y2="250" class="grid"></line>
+
+  <text x="505" y="404" class="small">0</text>
+  <text x="495" y="355" class="small">0.19</text>
+  <text x="495" y="305" class="small">0.20</text>
+  <text x="495" y="255" class="small">0.21</text>
+  <text x="495" y="205" class="small">0.22+</text>
+
+  <!-- baseline -->
+  <text x="585" y="425" class="small">Base</text>
+  <rect x="580" y="212" width="70" height="188" fill="url(#blue)" rx="8"></rect>
+  <text x="590" y="205" class="small">0.1873</text>
+
+  <!-- 0.85 -->
+  <text x="705" y="425" class="small">0.85</text>
+  <rect x="700" y="200" width="70" height="200" fill="url(#orange)" rx="8"></rect>
+  <text x="710" y="193" class="small">0.1753</text>
+
+  <!-- 0.75 -->
+  <text x="825" y="425" class="small">0.75</text>
+  <rect x="820" y="218" width="70" height="182" fill="url(#orange)" rx="8"></rect>
+  <text x="830" y="211" class="small">0.1824</text>
+
+  <!-- 0.60 -->
+  <text x="945" y="425" class="small">0.60</text>
+  <rect x="940" y="246" width="70" height="154" fill="url(#orange)" rx="8"></rect>
+  <text x="950" y="239" class="small">0.1932</text>
+
+  <text x="760" y="455" class="small">Best practical tradeoff: SACR 0.75</text>
+</svg>
