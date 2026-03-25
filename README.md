@@ -5,37 +5,43 @@
 <h1 align="center">⚡ CRS-LM</h1>
 
 <p align="center">
-  🧠 Context Reconstruction System for Language Models  
-  <br/>
-  ⚡ Reduce Tokens • Preserve Structure • Improve Efficiency
+  <b>Context Reconstruction System for Language Models</b><br/>
+  Reduce Tokens • Preserve Structure • Improve Efficiency
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-research-blue" />
+  <img src="https://img.shields.io/badge/focus-context--optimization-orange" />
+  <img src="https://img.shields.io/badge/token--reduction-41%25-success" />
 </p>
 
 ---
 
-## 🚀 Overview
+## 🚀 What This Is
 
-CRS-LM is a **structure-aware context optimization layer** for language models.
+CRS-LM is a **structure-aware context reduction system**.
 
-Instead of scaling models with more tokens:
+Instead of scaling LLMs with more tokens:
 
-> CRS-LM reduces input size **while preserving reasoning quality**
+> CRS-LM **filters, compresses, and reconstructs context** before it reaches the model.
 
 ---
 
 ## 🧠 Core Idea
 
-Instead of feeding full raw context to LLMs:
-
 ```text
-Raw Context → CRS Engine → Smart Context → LM
-✨ What CRS Does
-✂️ Removes noise
-📉 Compresses tokens
-🔄 Reconstructs missing structure
-🧠 Preserves reasoning signal
+Raw Context → CRS Engine → Smart Context → Language Model
+
+CRS sits before the model, not inside it.
+
+✨ What CRS Actually Does
+✂️ Removes low-signal tokens
+📉 Compresses context size
+🔄 Preserves structural relationships
+🧠 Maintains reasoning-critical signals
 🧬 Architecture
 <p align="center"> <img src="./crs-lm/architecture.svg" width="100%" /> </p>
-⚙️ Pipeline
+⚙️ Execution Pipeline
 Input Text
    ↓
 Tokenizer
@@ -46,23 +52,23 @@ Compressed Context
    ↓
 TinyLM
    ↓
-Output / Prediction
-📊 Results (Phase-1 Reality)
+Prediction / Loss
+📊 Measured Results (Phase-1)
 Mode	Tokens	Loss	Speed
 Baseline	81	0.1873	0.86s
 CRS-LM	48	0.2715	0.82s
-⚠️ Brutal Truth
+⚠️ Honest Reality
 ✅ ~41% token reduction
-❌ Quality drop exists
+❌ Quality degradation exists
 ⚠️ Not production-ready
 ✔️ Strong research direction
 🧪 Why This Matters
 Traditional LLM	CRS-LM
-Uses full context	Uses filtered context
-Token heavy	Token efficient
-No structure awareness	Structure-aware
-Linear reasoning	Reconstructed reasoning
-📁 Project Structure
+Uses full raw context	Uses filtered context
+Token inefficient	Token efficient
+No structure awareness	Structure-aware filtering
+Linear reasoning flow	Reconstructed reasoning
+📁 Repository Structure
 mos-parameter-golf/
 │
 ├── crs-lm/
@@ -88,11 +94,11 @@ pip install -r requirements.txt
 python train.py
 python infer.py
 python eval.py
-🔗 Key Components
-🧠 CRS Engine → context filtering + compression
-⚙️ SACR → structure-aware reduction logic
-🤖 TinyLM → lightweight sequence model
-📊 Benchmark → token vs loss tradeoff
+🔗 Core Components
+CRS Engine → context filtering + compression
+SACR Layer → structure-aware reduction logic
+TinyLM → lightweight evaluation model
+Benchmarks → token vs loss tradeoff
 🧬 Future Direction
 🔗 CRS + DFG (Deterministic Fragment Graph)
 🧠 AI Memory Layer (XLifelineAI)
@@ -109,7 +115,7 @@ Systems Architect • AI Infrastructure • M-OS • QBAIX
 
 ⭐ Support
 
-If this project interests you:
+If this work interests you:
 
 ⭐ Star the repo
 🍴 Fork it
