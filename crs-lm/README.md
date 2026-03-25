@@ -1,149 +1,69 @@
-Create or replace the **entire** file with this:
 
 ```md
 <p align="center">
-  <img src="assets/banner.svg" width="100%">
+  <img src="./banner.svg" width="100%" />
 </p>
 
-# CRS-LM  
-### Context Reconstruction for Language Models
+<h1 align="center">🧠 CRS-LM</h1>
 
-> A lightweight system for reducing input tokens while preserving sequence quality through structure-aware filtering.
-
-<p align="left">
-  <img src="https://img.shields.io/badge/status-experimental-blue">
-  <img src="https://img.shields.io/badge/method-SACR-orange">
-  <img src="https://img.shields.io/badge/model-TinyLM-green">
-  <img src="https://img.shields.io/badge/focus-context--efficiency-purple">
+<p align="center">
+  Context Reconstruction System for Language Models  
 </p>
 
 ---
 
-## 🧠 Problem
+## 🚀 What is CRS-LM?
 
-Small language models often process flat token streams with:
+CRS-LM is a **context optimization layer** for language models.
 
-- unnecessary token redundancy  
-- weak structure awareness  
-- wasted compute on low-signal input  
+Instead of:
+> Feeding full context blindly
 
-Under tight constraints, this matters a lot.
-
----
-
-## ⚡ Idea
-
-CRS-LM explores a simple principle:
-
-> Not all tokens are equally useful.
-
-Instead of only shrinking the model, it tries to improve efficiency by improving what the model sees.
-
----
-
-## 🧩 Method
-
-CRS-LM currently uses:
-
-# **SACR — Structure-Aware Context Reduction**
-
-SACR is a lightweight preprocessing layer that:
-
-- scores token usefulness  
-- keeps high-signal tokens  
-- preserves local neighbors  
-- maintains sequence continuity  
-- reduces low-value redundancy before the LM  
+We:
+> Filter → Compress → Reconstruct → Predict
 
 ---
 
 ## ⚙️ Pipeline
 
 ```text
-Raw Tokens
-   ↓
-SACR (Structure-Aware Context Reduction)
-   ↓
-Compact Sequence
-   ↓
-TinyLM
-   ↓
-Prediction / Loss
-📊 Controlled sweep
-Mode	Keep Ratio	Tokens	Final Tokens	Loss	Time (s)
-Baseline	1.00	81	81	0.1873	0.4465
-SACR	0.85	81	79	0.1753	0.4194
-SACR	0.75	81	76	0.1824	0.4036
-SACR	0.60	81	72	0.1932	0.4181
-🔥 Key insight
+Input → Tokenizer → CRS Filter → TinyLM → Output
+🧠 CRS Engine
 
-The sweep suggests:
+Core responsibilities:
 
-light reduction is viable
-aggressive reduction damages learning quality
-preserving local structure matters more than naive token dropping
-✅ Best practical sweet spot
-
-SACR (0.75)
-
-Why this is the most balanced point right now:
-
-token count reduced from 81 → 76
-final loss remained slightly better than baseline in this tiny setup
-training time improved slightly
-
-This is not a final claim of superiority.
-It is an early signal that structure-aware reduction is worth exploring.
-
-🧪 Experimental claim
-
-This is a controlled small-scale experiment.
-
-It shows early evidence that:
-
-reducing input size does not automatically degrade training
-token selection quality matters
-structure-preserving filtering is more promising than naive filtering
-
-It does not claim:
-
-state-of-the-art performance
-large-scale generalization
-final challenge readiness
-🚀 Run locally
-📦 Install
-pip install -r requirements.txt
-🧠 Train
-python train.py
-📊 Compare
-python compare.py
-📁 Project structure
-crs_lm/
-├── assets/              # banner.svg
-├── crs/                 # SACR filter logic
-├── data/                # tiny corpus
-├── docs/                # experiment note
-├── model/               # tokenizer + TinyLM
-├── compare.py
+✂️ Token filtering
+📉 Context compression
+🔄 Reconstruction logic
+🎯 Signal preservation
+📊 Metrics
+Metric	Value
+Token Reduction	~41%
+Speed Gain	Slight
+Loss Increase	Yes
+⚠️ Reality Check
+- Not optimized
+- Not production-ready
++ Strong research potential
+📁 Modules
+crs-lm/
+├── model/        # TinyLM
+├── tokenizer/    # Token processing
+├── crs/          # CRS engine
 ├── train.py
-├── requirements.txt
-└── README.md
-📄 Experiment note
+├── infer.py
+├── eval.py
+🧪 Example Flow
+text = "AI systems need better context"
 
-Detailed write-up:
+tokens = tokenize(text)
+filtered = crs_filter(tokens)
+output = model.predict(filtered)
+🧬 Roadmap
+🔍 Better CRS scoring
+🧠 Graph-based context (DFG)
+🔄 Semantic reconstruction
+📊 Benchmark vs LLMs
+🧠 Philosophy
 
-docs/CRS_LM_EXPERIMENT.md
-💡 Philosophy
-
-Efficiency is not only about smaller models.
-It is also about cleaner input.
-
-🧭 Context
-
-Built under:
-
-mos-parameter-golf → CRS-LM
-
-👤 Author
-
-Raaj Mandale
+“Context > Tokens”

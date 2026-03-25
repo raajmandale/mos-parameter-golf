@@ -1,106 +1,114 @@
 <p align="center">
-  <img src="crs_lm/assets/banner.svg" width="100%">
+  <img src="./crs-lm/banner.svg" width="100%" />
 </p>
 
-<h1 align="center">mos-parameter-golf</h1>
+<h1 align="center">⚡ MOS Parameter Golf → CRS-LM</h1>
 
 <p align="center">
-<b>Context-aware efficiency experiments for small language models</b><br>
-Active system: <code>crs_lm</code>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/status-experimental-blue">
-  <img src="https://img.shields.io/badge/focus-small--model--efficiency-green">
-  <img src="https://img.shields.io/badge/method-SACR-orange">
-  <img src="https://img.shields.io/badge/track-parameter--golf-purple">
+  🧠 Smarter Context • ⚡ Fewer Tokens • 🔍 Better Reasoning  
 </p>
 
 ---
 
-## 🧠 What this repository is
+## 🚀 Overview
 
-`mos-parameter-golf` is a research repo exploring one core question:
+This repository started as:
 
-> Can small language models become more efficient by improving input structure instead of only shrinking model size?
+> 🎯 **MOS Parameter Golf (token minimization experiments)**
 
-The current active direction is:
+Now evolved into:
 
-# 🚀 CRS-LM  
-## Context Reconstruction for Language Models
+> 🧠 **CRS-LM (Context Reconstruction System - Language Model)**
 
-This system lives in:
+---
+
+## 🧠 Core Idea
+
+Instead of feeding full raw context to LLMs:
 
 ```text
-crs_lm/
-⚡ Core idea
-
-Instead of only optimizing model size, CRS-LM explores a different path:
-
-compress context while preserving structure
-
-The idea is simple:
-
-not all tokens are equally useful
-sequence structure matters
-cleaner input may help small models learn more efficiently
-🔬 Current direction
-
-CRS-LM focuses on:
-
-🧩 structure-aware context reduction
-🧠 token efficiency in tiny language models
-📉 compression vs loss tradeoff
-⚙️ lightweight preprocessing before the LM
-📊 Result snapshot
-
-From the current controlled tiny-LM sweep:
-
-Mode	Tokens	Loss	Time (s)
-Baseline	81	0.1873	0.4465
-SACR (0.75)	76	0.1824	0.4036
-🔥 Takeaway
-
-A light, structure-aware reduction step reduced token count while preserving, and in this tiny setup slightly improving, final loss.
-
-🧩 Active project layout
+Raw Context → CRS Engine → Smart Context → LM
+CRS does:
+✂️ Removes noise
+📉 Compresses tokens
+🔄 Reconstructs missing structure
+🧠 Improves reasoning efficiency
+🧬 System Architecture
+Input Text
+   ↓
+Tokenizer
+   ↓
+CRS Filter Engine
+   ↓
+Compressed Context
+   ↓
+TinyLM
+   ↓
+Output / Prediction
+📊 Results (Phase-1 Reality)
+Mode	Tokens	Loss	Speed
+Baseline	81	0.1873	0.86s
+CRS-LM	48	0.2715	0.82s
+⚠️ Brutal Truth
+✅ ~41% token reduction
+❌ Quality drop exists
+⚠️ Not production-ready
+✔️ Strong research direction
+📁 Project Structure
 mos-parameter-golf/
-└── crs_lm/
-    ├── assets/
-    ├── crs/
-    ├── data/
-    ├── docs/
-    ├── model/
-    ├── compare.py
-    ├── train.py
-    ├── requirements.txt
-    └── README.md
-▶️ Quick start
-cd crs_lm
+│
+├── crs-lm/
+│   ├── banner.svg
+│   ├── README.md
+│   ├── model/
+│   ├── tokenizer/
+│   ├── crs/
+│   ├── train.py
+│   ├── infer.py
+│   └── eval.py
+│
+├── benchmarks/
+├── results/
+└── README.md
+⚙️ Quick Start
+git clone https://github.com/raajmandale/mos-parameter-golf
+cd mos-parameter-golf/crs-lm
+
 pip install -r requirements.txt
-python compare.py
-📄 Where to go next
 
-For the actual project details, open:
-
-crs_lm/README.md
-
-For the experiment write-up, open:
-
-crs_lm/docs/CRS_LM_EXPERIMENT.md
-🧭 Positioning
-
-This repository is:
-
-🧪 an experimental research workspace
-🧠 a context-first efficiency exploration
-⚙️ a lightweight LM preprocessing direction
-🚧 an evolving system, not a final benchmark claim
-👤 Author
+python train.py
+python infer.py
+python eval.py
+🧪 What Makes This Different?
+Traditional LLM	CRS-LM
+Uses full context	Uses filtered context
+Token heavy	Token efficient
+No reconstruction	Reconstruction-aware
+Linear reasoning	Structured reasoning
+🔗 Key Components
+🧠 CRS Engine → context compression + filtering
+🤖 TinyLM → lightweight model
+🔍 Evaluation → benchmark comparison
+📊 Results → token vs quality tradeoff
+🧬 Future Direction
+🔗 CRS + DFG (Deterministic Fragment Graph)
+🧠 AI Memory Layer (XLifelineAI)
+⚙️ M-OS Runtime Integration
+🤖 Agent Memory Optimization
+📌 Status
++ Research Prototype
+- Not Production Ready
++ High Potential Direction
+👨‍💻 Author
 
 Raaj Mandale
-Founder — ERANEST Technoware Pvt Ltd
+Systems Architect • AI Infra • M-OS • QBAIX
 
-📄 License
+⭐ Support
+Star ⭐
+Fork 🍴
+Share 🚀
+🧠 Final Thought
 
-MIT License
+“LLMs don’t need more tokens.
+They need better context.”
