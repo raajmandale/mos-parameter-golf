@@ -2,90 +2,157 @@
   <img src="./crs-lm/banner.svg" width="100%" />
 </p>
 
-<h1 align="center">⚡ CRS-LM</h1>
+<h1 align="center">M-OS — Parameter Golf (CRS-LM)</h1>
 
 <p align="center">
-  <b>Context Reconstruction System for Language Models</b><br/>
-  Reduce Tokens • Preserve Structure • Improve Efficiency
+<b>Context Reconstruction × Pattern Runtime</b><br>
+Small-model intelligence through structured context control
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-research-blue" />
-  <img src="https://img.shields.io/badge/focus-context--optimization-orange" />
-  <img src="https://img.shields.io/badge/token--reduction-41%25-success" />
+
+![status](https://img.shields.io/badge/status-research-blue)
+![runtime](https://img.shields.io/badge/runtime-CRS--LM-green)
+![ai](https://img.shields.io/badge/AI-context--engine-purple)
+![track](https://img.shields.io/badge/track-parameter--golf-orange)
+
 </p>
 
 ---
 
-## 🚀 What This Is
+# 🧠 Core Idea
 
-CRS-LM is a **structure-aware context reduction system**.
+Instead of scaling models endlessly:
 
-Instead of scaling LLMs with more tokens:
-
-> CRS-LM **filters, compresses, and reconstructs context** before it reaches the model.
+> Control the **context**, not the **parameters**
 
 ---
 
-## 🧠 Core Idea
+## ⚡ Concept Flow
 
-```text
-Raw Context → CRS Engine → Smart Context → Language Model
 
-CRS sits before the model, not inside it.
+Raw Context → CRS Engine → Smart Context → TinyLM
 
-✨ What CRS Actually Does
-✂️ Removes low-signal tokens
-📉 Compresses context size
-🔄 Preserves structural relationships
-🧠 Maintains reasoning-critical signals
-🧬 Architecture
-<p align="center"> <img src="./crs-lm/architecture.svg" width="100%" /> </p>
-⚙️ Execution Pipeline
+
+---
+
+## ✨ What CRS Does
+
+- ✂️ Removes irrelevant noise  
+- 📉 Compresses token space  
+- 🔄 Reconstructs missing structure  
+- 🧠 Preserves reasoning signal  
+
+---
+
+# 🧬 Architecture
+
+<p align="center">
+  <img src="./crs-lm/architecture.svg" width="100%" />
+</p>
+
+---
+
+# ⚙️ Pipeline
+
+
 Input Text
-   ↓
+↓
 Tokenizer
-   ↓
+↓
 CRS Filter Engine (SACR)
-   ↓
+↓
 Compressed Context
-   ↓
+↓
 TinyLM
-   ↓
-Prediction / Loss
-📊 Measured Results (Phase-1)
-Mode	Tokens	Loss	Speed
-Baseline	81	0.1873	0.86s
-CRS-LM	48	0.2715	0.82s
-⚠️ Honest Reality
-✅ ~41% token reduction
-❌ Quality degradation exists
-⚠️ Not production-ready
-✔️ Strong research direction
-🧪 Why This Matters
-Traditional LLM	CRS-LM
-Uses full raw context	Uses filtered context
-Token inefficient	Token efficient
-No structure awareness	Structure-aware filtering
-Linear reasoning flow	Reconstructed reasoning
-📁 Repository Structure
+↓
+Prediction
+
+
+---
+
+# 📊 Benchmark (Visual)
+
+<p align="center">
+  <img src="./crs-lm/benchmark.svg" width="100%" />
+</p>
+
+---
+
+# 🎬 Demo (Live Simulation)
+
+<p align="center">
+  <img src="./crs-lm/demo.svg" width="100%" />
+</p>
+
+---
+
+# 📈 Results Snapshot
+
+| Mode        | Tokens | Loss   | Speed |
+|------------|--------|--------|-------|
+| Baseline   | 81     | 0.1873 | 0.44s |
+| CRS-LM     | 76     | 0.1824 | 0.40s |
+
+---
+
+# ⚠️ Reality Check
+
+- ✅ ~6–40% token reduction (config dependent)  
+- ⚠️ Aggressive filtering reduces quality  
+- ❌ Not production-ready  
+- ✔️ Strong research direction  
+
+---
+
+# 🧪 Why This Matters
+
+| Traditional LLM | CRS-LM |
+|----------------|--------|
+| Uses full context | Uses filtered context |
+| Token-heavy | Token-efficient |
+| No structure awareness | Structure-aware |
+| Linear reasoning | Reconstructed reasoning |
+
+---
+
+# 🔗 Key Components
+
+- 🧠 **CRS Engine** → context filtering + compression  
+- ⚙️ **SACR** → structure-aware reduction logic  
+- 🤖 **TinyLM** → lightweight reasoning model  
+- 📊 **Benchmark Layer** → token vs loss tradeoff  
+
+---
+
+# 📁 Project Structure
+
+
 mos-parameter-golf/
 │
 ├── crs-lm/
-│   ├── banner.svg
-│   ├── architecture.svg
-│   ├── README.md
-│   ├── model/
-│   ├── tokenizer/
-│   ├── crs/
-│   ├── train.py
-│   ├── infer.py
-│   └── eval.py
+│ ├── banner.svg
+│ ├── architecture.svg
+│ ├── benchmark.svg
+│ ├── demo.svg
+│ ├── README.md
+│ ├── model/
+│ ├── tokenizer/
+│ ├── crs/
+│ ├── train.py
+│ ├── infer.py
+│ └── eval.py
 │
 ├── benchmarks/
 ├── results/
 └── README.md
-⚙️ Quick Start
+
+
+---
+
+# ⚙️ Quick Start
+
+```bash
 git clone https://github.com/raajmandale/mos-parameter-golf
 cd mos-parameter-golf/crs-lm
 
@@ -94,20 +161,15 @@ pip install -r requirements.txt
 python train.py
 python infer.py
 python eval.py
-🔗 Core Components
-CRS Engine → context filtering + compression
-SACR Layer → structure-aware reduction logic
-TinyLM → lightweight evaluation model
-Benchmarks → token vs loss tradeoff
 🧬 Future Direction
-🔗 CRS + DFG (Deterministic Fragment Graph)
+🔗 CRS + Deterministic Fragment Graph (DFG)
 🧠 AI Memory Layer (XLifelineAI)
 ⚙️ M-OS runtime integration
 🤖 Agent memory optimization
 📌 Status
-+ Research Prototype
-- Not Production Ready
-+ High Potential Direction
+🧪 Research Prototype
+⚠️ Experimental System
+🚀 High Potential Direction
 👨‍💻 Author
 
 Raaj Mandale
@@ -115,7 +177,7 @@ Systems Architect • AI Infrastructure • M-OS • QBAIX
 
 ⭐ Support
 
-If this work interests you:
+If this work resonates:
 
 ⭐ Star the repo
 🍴 Fork it
