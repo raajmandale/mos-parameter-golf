@@ -19,8 +19,32 @@ Small-model intelligence through structured context control
 </p>
 
 ---
+## 🌐 Mandale-OS Runtime Ecosystem
 
-# 🧠 Core Idea
+CRS-LM operates as a lightweight runtime-optimization and context-routing experiment inside the broader Mandale-OS Runtime Intelligence Ecosystem.
+
+<p align="center">
+
+<a href="https://github.com/raajmandale/mandale-os">
+<img src="https://img.shields.io/badge/MANDALE--OS-RUNTIME%20ROOT-06b6d4?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/mos-mee-execution-reactor">
+<img src="https://img.shields.io/badge/MEE-EXECUTION%20REACTOR-f97316?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/XLifelineAI">
+<img src="https://img.shields.io/badge/XLIFELINEAI-CONTINUITY%20RUNTIME-0284c7?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/mos-parameter-golf">
+<img src="https://img.shields.io/badge/PARAMETER--GOLF-OPTIMIZATION%20LAB-84cc16?style=for-the-badge" />
+</a>
+
+</p>
+
+---
+## 🧠 Core Idea
 
 Instead of scaling models endlessly:
 
@@ -163,31 +187,6 @@ python train.py
 python infer.py
 python eval.py
 ```
-
----
-## 🌐 Mandale-OS Runtime Ecosystem
-
-CRS-LM operates as a lightweight runtime-optimization and context-routing experiment inside the broader Mandale-OS Runtime Intelligence Ecosystem.
-
-<p align="center">
-
-<a href="https://github.com/raajmandale/mandale-os">
-<img src="https://img.shields.io/badge/MANDALE--OS-RUNTIME%20ROOT-06b6d4?style=for-the-badge" />
-</a>
-
-<a href="https://github.com/raajmandale/mos-mee-execution-reactor">
-<img src="https://img.shields.io/badge/MEE-EXECUTION%20REACTOR-f97316?style=for-the-badge" />
-</a>
-
-<a href="https://github.com/raajmandale/XLifelineAI">
-<img src="https://img.shields.io/badge/XLIFELINEAI-CONTINUITY%20RUNTIME-0284c7?style=for-the-badge" />
-</a>
-
-<a href="https://github.com/raajmandale/mos-parameter-golf">
-<img src="https://img.shields.io/badge/PARAMETER--GOLF-OPTIMIZATION%20LAB-84cc16?style=for-the-badge" />
-</a>
-
-</p>
 
 ---
 ## 🧬 Future Direction
