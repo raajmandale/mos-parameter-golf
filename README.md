@@ -154,6 +154,7 @@ mos-parameter-golf/
 
 ```bash
 git clone https://github.com/raajmandale/mos-parameter-golf
+
 cd mos-parameter-golf/crs-lm
 
 pip install -r requirements.txt
@@ -161,28 +162,82 @@ pip install -r requirements.txt
 python train.py
 python infer.py
 python eval.py
-🧬 Future Direction
-🔗 CRS + Deterministic Fragment Graph (DFG)
-🧠 AI Memory Layer (XLifelineAI)
-⚙️ M-OS runtime integration
-🤖 Agent memory optimization
-📌 Status
-🧪 Research Prototype
-⚠️ Experimental System
-🚀 High Potential Direction
-👨‍💻 Author
+```
 
-Raaj Mandale
-Systems Architect • AI Infrastructure • M-OS • QBAIX
+---
+## 🌐 Mandale-OS Runtime Ecosystem
 
-⭐ Support
+CRS-LM operates as a lightweight runtime-optimization and context-routing experiment inside the broader Mandale-OS Runtime Intelligence Ecosystem.
+
+<p align="center">
+
+<a href="https://github.com/raajmandale/mandale-os">
+<img src="https://img.shields.io/badge/MANDALE--OS-RUNTIME%20ROOT-06b6d4?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/mos-mee-execution-reactor">
+<img src="https://img.shields.io/badge/MEE-EXECUTION%20REACTOR-f97316?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/XLifelineAI">
+<img src="https://img.shields.io/badge/XLIFELINEAI-CONTINUITY%20RUNTIME-0284c7?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/raajmandale/mos-parameter-golf">
+<img src="https://img.shields.io/badge/PARAMETER--GOLF-OPTIMIZATION%20LAB-84cc16?style=for-the-badge" />
+</a>
+
+</p>
+
+---
+## 🧬 Future Direction
+
+- 🔗 CRS + Deterministic Fragment Graph (DFG)
+- 🧠 AI Memory Layer (XLifelineAI)
+- ⚙️ M-OS runtime integration
+- 🤖 Agent memory optimization
+
+---
+## 📌 Status
+
+- 🧪 Research Prototype
+- ⚠️ Experimental System
+- 🚀 High Potential Direction
+
+---
+## 👨‍💻 Founder & Research Direction
+
+**Raaj Mandale**  
+Systems Architect • Runtime Intelligence • Mandale-OS • QBAIX
+
+Founder — Eranest Technoware Pvt Ltd
+
+🌐 https://raajmandale.in  
+🔬 https://orcid.org/0009-0005-9810-1655  
+📚 https://openalex.org/A5127026877  
+💻 https://github.com/raajmandale
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## ⭐ Support
 
 If this work resonates:
 
-⭐ Star the repo
-🍴 Fork it
-🚀 Share it
-🧠 Final Thought
+- ⭐ Star the repo
+- 🍴 Fork it
+- 🚀 Share it
 
-LLMs don’t need more tokens.
-They need better context.
+---
+
+## 🧠 Final Thought
+
+> LLMs don’t need more tokens.  
+> They need better context.
+
+--- 
